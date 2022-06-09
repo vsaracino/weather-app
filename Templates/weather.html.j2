@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html>
+     <head>
+        <style>
+          .thermometer{
+           display: block;
+           margin-left: auto;
+           margin-right: auto;
+           width: 35%;
+           }
+          body { background-color: #030303; color: #FFFFFF; font-family: sans-serif; }
+          h1 { color: #FFFFFF; text-align:center; }
+          h2 { color: #FFFFFF; text-align:center; }
+        </style>
+      </head>
+      <body>
+        <form action="" method="get" class="form-example">
+          <div class="form-example" align=center>
+            <label for="name"><i>Enter your <b>zip code:</b></i> </label>
+            <input type="text" name="zip" id="zip" required>
+          </div>
+          {% if zip != "" %}<h1> In {{city}}, {{zip}} the temperature is currently {{tmp}} F </h1>
+          <br>
+          <h2>You'll see {{conditions}} at the moment.</h2>
+          <p><img class="thermometer" src="https://images.unsplash.com/photo-1560977501-7cb367eccebe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80" alt="image of thermometer outdoors displaying 106 degrees F, 41 degrees C"></p>{% endif%} 
+        </form>
+      </body>
+    </html>
