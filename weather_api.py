@@ -1,4 +1,3 @@
-from cgitb import reset
 import requests
 
 def getWeatherData(zip_code):
